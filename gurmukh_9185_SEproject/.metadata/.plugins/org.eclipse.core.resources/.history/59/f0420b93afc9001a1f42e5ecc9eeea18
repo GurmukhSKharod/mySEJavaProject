@@ -1,0 +1,107 @@
+package HotelApp.views;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+
+import HotelApp.common.HotelAppInterface;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Color;
+
+public class HotelAppHomeScreen implements HotelAppInterface {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					HotelAppHomeScreen window = new HotelAppHomeScreen();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public HotelAppHomeScreen() {
+		initComponents();
+		createEvents();
+	}
+	@Override
+	public void clearFields() {
+		// No code here there is only a text area field and button
+	}
+
+	@Override
+	public void initComponents() {
+		// TODO Auto-generated method stub
+		frame = new JFrame();
+		frame.setBounds(400, 400, 400, 400);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JLabel lblNewLabel = new JLabel("Hotel App Home Screen");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		
+		JLabel lblNewLabel_1 = new JLabel("Welcome to the Hotel App!");
+		lblNewLabel_1.setForeground(new Color(50, 205, 50));
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.ITALIC, 14));
+		
+		JLabel lblNewLabel_2 = new JLabel("<html>This app is used to provide the following functions:"
+				+ "<br> - A user sign in or sign up"
+				+ "<br> - Booking a Hotel"
+				+ "<br> - Booking resteraunt<br>"
+				+ "<br>After options are selected on each screen, "
+				+ "<br>notifications will show with results."
+				+ "<br>Note that having a user account will apply a 10% discount!</html>");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(88)
+							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+								.addGroup(groupLayout.createSequentialGroup()
+									.addGap(10)
+									.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 177, GroupLayout.PREFERRED_SIZE))
+								.addComponent(lblNewLabel)))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(58)
+							.addComponent(lblNewLabel_2)))
+					.addContainerGap(101, Short.MAX_VALUE))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(23)
+					.addComponent(lblNewLabel)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addComponent(lblNewLabel_1)
+					.addGap(18)
+					.addComponent(lblNewLabel_2)
+					.addContainerGap(253, Short.MAX_VALUE))
+		);
+		frame.getContentPane().setLayout(groupLayout);
+	}
+
+	@Override
+	public void createEvents() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

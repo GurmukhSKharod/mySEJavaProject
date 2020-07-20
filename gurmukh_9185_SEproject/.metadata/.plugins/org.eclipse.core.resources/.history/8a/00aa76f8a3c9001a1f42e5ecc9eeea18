@@ -1,0 +1,216 @@
+package HotelApp.views;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import java.awt.FlowLayout;
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Color;
+
+public class HotelAppMain extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textFieldUsername;
+	private JTextField textFieldPassword;
+	private JTextField textFieldNewUsername;
+	private JTextField textFieldNewPassword;
+	private JTextField textFieldConfirmNewPassword;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					HotelAppMain frame = new HotelAppMain();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public HotelAppMain() {
+		
+		
+		initComponents();
+		createEvents();
+		
+	}
+
+	//create and set components
+	private void initComponents() {
+		// TODO Auto-generated method stub
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 400, 375);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setTitle("Hotel App Login");
+		setContentPane(contentPane);
+		
+		JLabel lblLoginTitle = new JLabel("Hotel App Login");
+		lblLoginTitle.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		
+		JLabel lblUsername = new JLabel("Username:");
+		
+		JLabel lblPassword = new JLabel("Password:");
+		
+		textFieldUsername = new JTextField();
+		textFieldUsername.setColumns(10);
+		
+		textFieldPassword = new JTextField();
+		textFieldPassword.setColumns(10);
+		
+		JButton btnLogin = new JButton("Login");
+		
+		JLabel lblNoAccount = new JLabel("Don't have an account? Sign Up Below!\r\n\r\n");
+		
+		JLabel lblFailLogin = new JLabel("Unsuccessful Login. Try Again.");
+		lblFailLogin.setForeground(Color.RED);
+		
+		JButton btnSignUp = new JButton("Sign Up");
+		
+		JLabel lblOptionalNote = new JLabel("Using an account is optional, but we offer a 10% discount at purchase!");
+		lblOptionalNote.setForeground(Color.BLUE);
+		lblOptionalNote.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 10));
+		
+		JButton btnSkipLogin = new JButton("Skip Login");
+		
+		JLabel lblOneAccountNote = new JLabel("Only one account can be created at a time.");
+		
+		JLabel lblNewUsername = new JLabel("New Username");
+		
+		JLabel lblNewPassword = new JLabel("New Password");
+		
+		JLabel lblConfirmNewPassword = new JLabel("Confirm New Password");
+		
+		JLabel lblAccountCreated = new JLabel("Account created successfully!");
+		lblAccountCreated.setForeground(new Color(0, 128, 0));
+		lblAccountCreated.setFont(new Font("Tahoma", Font.ITALIC, 11));
+		
+		textFieldNewUsername = new JTextField();
+		textFieldNewUsername.setText("");
+		textFieldNewUsername.setColumns(10);
+		
+		textFieldNewPassword = new JTextField();
+		textFieldNewPassword.setText("");
+		textFieldNewPassword.setColumns(10);
+		
+		textFieldConfirmNewPassword = new JTextField();
+		textFieldConfirmNewPassword.setColumns(10);
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(115)
+							.addComponent(lblLoginTitle))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(lblOptionalNote))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(72)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(lblUsername)
+									.addPreferredGap(ComponentPlacement.UNRELATED)
+									.addComponent(textFieldUsername, GroupLayout.PREFERRED_SIZE, 139, GroupLayout.PREFERRED_SIZE))
+								.addComponent(lblOneAccountNote)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+									.addGroup(gl_contentPane.createSequentialGroup()
+										.addComponent(btnLogin)
+										.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addComponent(btnSkipLogin))
+									.addGroup(gl_contentPane.createSequentialGroup()
+										.addComponent(lblPassword)
+										.addPreferredGap(ComponentPlacement.UNRELATED)
+										.addComponent(textFieldPassword, 139, 139, 139))
+									.addComponent(lblNoAccount, Alignment.TRAILING))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(lblConfirmNewPassword)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(textFieldConfirmNewPassword, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(btnSignUp)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(lblAccountCreated))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+										.addComponent(lblNewUsername)
+										.addComponent(lblNewPassword))
+									.addGap(41)
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+										.addComponent(textFieldNewPassword, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+										.addComponent(textFieldNewUsername, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(106)
+							.addComponent(lblFailLogin)))
+					.addContainerGap(13, Short.MAX_VALUE))
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addComponent(lblLoginTitle)
+					.addGap(2)
+					.addComponent(lblOptionalNote)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblUsername)
+						.addComponent(textFieldUsername, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblPassword)
+						.addComponent(textFieldPassword, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addGap(18)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addComponent(btnLogin)
+						.addComponent(btnSkipLogin))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addComponent(lblFailLogin)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addComponent(lblNoAccount)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(lblOneAccountNote)
+					.addGap(18)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(lblNewUsername)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(lblNewPassword)
+								.addComponent(textFieldNewPassword, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(lblConfirmNewPassword)
+								.addComponent(textFieldConfirmNewPassword, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+						.addComponent(textFieldNewUsername, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnSignUp)
+						.addComponent(lblAccountCreated)))
+		);
+		contentPane.setLayout(gl_contentPane);
+	}
+	
+	//create events
+	private void createEvents() {
+		// TODO Auto-generated method stub
+		
+	}
+}

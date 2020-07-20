@@ -1,0 +1,37 @@
+package HotelApp.common;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+
+import HotelApp.views.HotelAppHomeScreen;
+import HotelApp.views.HotelAppHotelBooking;
+import HotelApp.views.HotelAppLogin;
+import HotelApp.views.HotelAppReceiptScreen;
+import HotelApp.views.HotelAppRestaurantBooking;
+
+public class HotelAppMain {
+
+	public static void main(String[] args) {
+
+		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					HotelAppLogin loginScreen = new HotelAppLogin();
+					HotelAppHomeScreen homeScreen = new HotelAppHomeScreen();
+					HotelAppHotelBooking hotelBookingScreen = new HotelAppHotelBooking();
+					HotelAppRestaurantBooking restaurantBookingScreen = new HotelAppRestaurantBooking();
+					HotelAppReceiptScreen receiptScreen = new HotelAppReceiptScreen();
+					loginScreen.setVisible(true);
+					HotelAppHomeScreen window = new HotelAppHomeScreen();
+					window.frmHomeScreen.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
+	}
+
+}

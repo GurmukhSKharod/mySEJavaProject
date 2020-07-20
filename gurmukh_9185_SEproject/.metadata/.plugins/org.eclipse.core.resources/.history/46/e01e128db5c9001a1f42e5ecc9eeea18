@@ -1,0 +1,105 @@
+package HotelApp.views;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+
+public class HotelAppHotelBooking {
+
+	private JFrame frmHotelBooking;
+	private JLabel lblHotelBookingTitle;
+	private JLabel lblHotelBookingInstructions;
+	private JLabel lblChooseRoom;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					HotelAppHotelBooking window = new HotelAppHotelBooking();
+					window.frmHotelBooking.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public HotelAppHotelBooking() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmHotelBooking = new JFrame();
+		frmHotelBooking.setTitle("Hotel Booking");
+		frmHotelBooking.setBounds(100, 100, 400, 400);
+		frmHotelBooking.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		lblHotelBookingTitle = new JLabel("Hotel App Hotel Booking");
+		lblHotelBookingTitle.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		
+		lblHotelBookingInstructions = new JLabel("Please choose one option from each section below.");
+		lblHotelBookingInstructions.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		
+		lblChooseRoom = new JLabel("ChooseRoomSize: ($100 more per size)");
+		
+		JRadioButton rdbtnSmallRoom = new JRadioButton("Small");
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Medium");
+		
+		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Large");
+		GroupLayout groupLayout = new GroupLayout(frmHotelBooking.getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(77)
+							.addComponent(lblHotelBookingTitle))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(63)
+							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+								.addComponent(lblChooseRoom)
+								.addComponent(lblHotelBookingInstructions)
+								.addGroup(groupLayout.createSequentialGroup()
+									.addComponent(rdbtnSmallRoom)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(rdbtnNewRadioButton_1)
+									.addPreferredGap(ComponentPlacement.UNRELATED)
+									.addComponent(rdbtnNewRadioButton_2)))))
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(lblHotelBookingTitle)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(lblHotelBookingInstructions)
+					.addGap(18)
+					.addComponent(lblChooseRoom)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(rdbtnSmallRoom)
+						.addComponent(rdbtnNewRadioButton_1)
+						.addComponent(rdbtnNewRadioButton_2))
+					.addContainerGap(249, Short.MAX_VALUE))
+		);
+		frmHotelBooking.getContentPane().setLayout(groupLayout);
+	}
+}

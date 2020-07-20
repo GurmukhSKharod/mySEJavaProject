@@ -1,0 +1,20 @@
+package HotelApp.common;
+
+import HotelApp.views.HotelAppHomeScreen;
+import HotelApp.views.HotelAppHotelBooking;
+import HotelApp.views.HotelAppLogin;
+import HotelApp.views.HotelAppReceiptScreen;
+import HotelApp.views.HotelAppRestaurantBooking;
+
+public class HotelAppMain {
+
+	public static void main(String[] args) {
+		HotelAppLogin loginScreen = new HotelAppLogin();
+		HotelAppHomeScreen homeScreen = new HotelAppHomeScreen();
+		HotelAppHotelBooking hotelBookingScreen = new HotelAppHotelBooking();
+		HotelAppRestaurantBooking restaurantBookingScreen = new HotelAppRestaurantBooking();
+		HotelAppReceiptScreen receiptScreen = new HotelAppReceiptScreen();
+
+	}
+
+}
