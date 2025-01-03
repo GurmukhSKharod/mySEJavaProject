@@ -2,7 +2,7 @@
 
 ### Technologies Used:
 ![](https://skillicons.dev/icons?i=java,androidstudio,sqlite)
-
+Java, Android Studio, SQLite
 
 ### Instructions:
 The following android app allows users to sign in with a Username & Password.
