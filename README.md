@@ -1,12 +1,12 @@
 # Hotel Application
 
 ### Technologies Used:
-![](https://skillicons.dev/icons?i=java,sqlite)
-Java, Android Studio, SQLite
+![](https://skillicons.dev/icons?i=java)
+Java
 
 ### Instructions:
-The following android app allows users to sign in with a Username & Password.
+The following app allows users to sign in with a Username & Password.
 
-Users have the ability to choose Hotels and Book food at a Resteraunt.
+Users have the ability to choose Hotels with various details and Book food at a Resteraunt.
 
-All user data is saved in SQLite for persistent storage.
+The application is a Java Swing App, which allows for a better UI.
