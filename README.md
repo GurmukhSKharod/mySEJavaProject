@@ -4,6 +4,7 @@
 -Java
 -Android Studio
 -SQLite
+![](https://skillicons.dev/icons?i=java,androidstudio,sqlite)
 
 ### Instructions:
 The following android app allows users to sign in with a Username & Password.
