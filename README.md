@@ -1,7 +1,7 @@
 # Hotel Application
 
 ### Technologies Used:
-![](https://skillicons.dev/icons?i=java,androidstudio,sqlite)
+![](https://skillicons.dev/icons?i=java,sqlite)
 Java, Android Studio, SQLite
 
 ### Instructions:
